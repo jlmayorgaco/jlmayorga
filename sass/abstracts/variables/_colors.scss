@@ -1,0 +1,61 @@
+$color__background-body: #fff;
+$color__background-screen: #f1f1f1;
+$color__background-hr: #ccc;
+$color__background-button: #e6e6e6;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+
+$color__text-screen: #21759b;
+$color__text-input: #666;
+$color__text-input-focus: #111;
+$color__link: #4169e1; //royalblue
+$color__link-visited: #800080; //purple
+$color__link-hover: #191970; //midnightblue
+$color__text-main: #404040;
+
+$color__border-button: #ccc #ccc #bbb;
+$color__border-button-hover: #ccc #bbb #aaa;
+$color__border-button-focus: #aaa #bbb #bbb;
+$color__border-input: #ccc;
+$color__border-abbr: #666;
+
+
+// Synth Wave Green
+$theme__color__main: #696969;
+$theme__color__clear: #f4f9fc;
+$theme__color__accent: #BFBC4D;
+$theme__color__texts: #5B7E5E;
+$theme__color__other: #7A9E70;
+
+//Synth Wave Purple
+$theme__color__main: #1D293D;
+$theme__color__clear: #E5DFDC;
+$theme__color__clear: #f4f9fc;
+$theme__color__accent: #6400B1;
+$theme__color__texts: #DBB151;
+$theme__color__other: #98D5E9;
+
+.theme--synth{
+--color-main: #1D293D;
+--color-gray: #696969;
+--color-clear: #f4f9fc;
+--color-accent: #6400B1;
+--color-texts: #DBB151;
+--color-other: #98D5E9;
+}
+
+.theme--synth2{
+    --color-main: #333D60;
+    --color-gray: #696969;
+    --color-clear: #f4f9fc;
+    --color-accent: #6400B1;
+    --color-texts: #6691AE;
+    }
+    .theme--synth3{
+--color-main: #251632;
+--color-gray: #696969;
+--color-clear: #f4f9fc;
+--color-accent: #6400B1;
+--color-texts: #98AB75;
+        }
+    

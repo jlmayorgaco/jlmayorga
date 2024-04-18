@@ -1,0 +1,23 @@
+.jl-icon{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    padding: 0px;
+    margin: 0px;
+} 
+
+.jl--me{
+    content: url('./images/user.png')
+}
+.jl--projects{
+    content: url('./images/bag.png')
+}
+.jl--research{
+    content: url('./images/atom.png')
+}
+.jl--tutorials{
+    content: url('./images/schedule.png')
+}
+.jl--blog{
+    content: url('./images/copy-writing.png')
+}

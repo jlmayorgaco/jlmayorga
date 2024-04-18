@@ -1,0 +1,9 @@
+body {
+
+	background: $color__background-body; // Fallback for when there is no custom background color defined.
+
+	--size-page-pd: 25px;
+	--size-page-border-m: 5px;
+	--size-page-border-xl: 25px;
+	
+}
