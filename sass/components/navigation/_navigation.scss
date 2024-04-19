@@ -6,28 +6,135 @@
 .site-header{
 	display: block;
 	width: 100%;
+	margin: 0 auto;
+	max-width: var(--size-page-max-w);
 
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
+
+	flex-direction: row-reverse;
 }
 
 
 /* --------------------------------
 ---- HEADER::LOGO -----------------
 ---------------------------------*/
-.site-title{
+.site-branding{
+	width: 20px;
+	padding: 6px;
 	display: block;
-	width: 80px;
 }
-.site-title img{
-	width: 100%;
-	padding-right: 20px;
-}
+
 .site-branding p{
 	margin: 0px;
 	padding: 0px;
 }
+
+.site-title{
+	display: block;
+	width: 42px;
+}
+.site-title img{
+	width: 100%;
+	padding-right: 0px;
+}
+
+.jm__logo{
+
+	display: block;
+	box-sizing: border-box;
+	position: relative;
+	top: 1px;
+
+	.logo__border{
+		display: block;
+		box-sizing: border-box;
+		width: 100%;
+		padding: var(--logo-p);
+	}
+	.logo__content{
+		display: block;
+		box-sizing: border-box;
+
+		width: var(--logo-w);
+		height: var(--logo-h);
+
+		padding: var(--logo-p);
+
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+
+		border: 2px solid var(--color-texts);
+		border-radius: 100%;
+
+
+		text-decoration: none !important;
+
+		font-size: var(--logo-font-size);
+		font-family: 'louis-george-cafe';		
+		letter-spacing: -1px;
+		font-weight: bold;
+		color: var(--color-texts);
+		&:hover{
+			color:  var(--color-texts-hover );
+			border-color:  var(--color-texts-hover );
+		}
+	}
+	.logo__lt{
+		box-sizing: border-box;
+		position: relative;
+		top: -2px;
+		left: 0px;
+	}
+	.logo__bt{
+		box-sizing: border-box;
+
+		position: relative;
+		top: -2px;
+		left: 0px;
+	}
+	.logo__text{
+		box-sizing: border-box;
+		text-decoration: none;
+		text-transform: none;
+		font-weight: 900;
+
+		position: relative;
+		top: -2px;
+		left: 0px;
+	}
+}
+
+.jl--logo-circle .jm__logo{
+	--logo-w: 50px;
+	--logo-h: 50px;
+	--logo-p: 5px;
+	--logo-font-size: 26px;
+
+	.logo__lt, .logo__bt{
+		display: block;
+	}
+	.logo__content{
+		border-radius: 100%;
+	}
+}
+.jl--logo-rectangle .jm__logo{
+	--logo-w: 192px;
+	--logo-h: 36px;
+	--logo-p: 0px;
+	--logo-font-size: 26px;
+
+	.logo__lt, .logo__bt{
+		display: none;
+	}
+	.logo__content{
+		border-radius: 0px;
+	}
+}
+
 
 
 /* --------------------------------
@@ -38,12 +145,11 @@
 	display: block;
 	width: 100%;
 
-
 	i{
 		display: none;
 	}
 
-	ul {
+	.main-navigation__nav-list {
 		display: none;
 		list-style: none;
 		margin: 0;
@@ -56,7 +162,6 @@
 		flex-direction: row;
 		align-items: flex-start;
 		justify-content: flex-end;
-
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -107,12 +212,11 @@
 		position: relative;
 		padding: 0.5em 1em;
 
-		font-family: 'Arial';
-		letter-spacing: 3px;
+		font-family: var(---font-family);
 		color: var(--color-accent);
+		letter-spacing: var(--font-spacing-title);
 
-		&:hover > a,
-		&.focus > a {
+		&:hover > a, &.focus > a {
 		}
 	}
 

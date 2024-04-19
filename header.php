@@ -39,10 +39,18 @@
 	<!-- --------------------------------------- -->
 
 	<!-- --------------------------------------- -->
-	<!-- ----WORDPRESS HEAD --------------------- -->
+	<!-- ----WORDPRESS HEAD -------------------- -->
 	<!-- --------------------------------------- -->
 	<?php wp_head(); ?>
 	<!-- --------------------------------------- -->
+
+
+	<!-- --------------------------------------- -->
+	<!-- ----WORDPRESS HEAD -------------------- -->
+	<!-- --------------------------------------- -->
+	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" />
+	<!-- --------------------------------------- -->
+
 
 </head>
 <!-- ----------------------------------------------------------------- -->
@@ -58,7 +66,7 @@ $visited = isset($_SESSION['visited']);
 //$_SESSION['visited'] = true;
 ?>
 
-<body <?php body_class();  ?> is-first-time="<?= $visited ? '' : 'first-visit' ?>">
+<body <?php body_class();  ?> is-first-time="<?= $visited ? '' : 'first-visit' ?>" jm-theme="theme--2024">
 
 	<!-- --------------------------------------------------- -->
 	<?php wp_body_open(); ?>
@@ -67,7 +75,7 @@ $visited = isset($_SESSION['visited']);
 	<!-- -------------------------------------------------- -->
 	<!-- --- PAGE ----------------------------------------- -->
 	<!-- -------------------------------------------------- -->
-	<div id="page" class="jlmayorga__page theme--synth3 site">
+	<div id="page">
 
 		<!-- -------------------------------------------------- -->
 		<!-- ----WORDPRESS:: Skip to content ------------------ -->
@@ -85,25 +93,45 @@ $visited = isset($_SESSION['visited']);
 			<!-- -------------------------------------------------- -->
 			<!-- ---- HEADER::SITE BRANDING ----------------------- -->
 			<!-- -------------------------------------------------- -->
-			<div class="site-branding">
+			<div class="site-branding jl--logo-circle" >
+				<p class="site-title">
+					<a style="text-decoration: none !important;" href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+						<div class="jm__logo">
+							<div class="logo__border">
+								<div class="logo__content">
+									<div class="logo__lt">&#8249;</div>
+									<div class="logo__text">jl</div>
+									<div class="logo__bt">&#8250;</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</p>
+
 				<?php
-				the_custom_logo();
-				if (is_front_page() && is_home()) :
+				$personal_website_for_portfolio_and_blog_about_tech_code_ai_and_robotics_description = get_bloginfo('description', 'display');
+				if ($personal_website_for_portfolio_and_blog_about_tech_code_ai_and_robotics_description || is_customize_preview()) :
 				?>
-					<h1 class="site-title">
-						<a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?>
-						</a>
-					</h1>
+					<p class="site-description"><?php echo $personal_website_for_portfolio_and_blog_about_tech_code_ai_and_robotics_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
+												?></p>
+				<?php endif; ?>
+			</div>
+			<div class="site-branding jl--logo-rectangle" style="display: none;">
+				<p class="site-title">
+					<a style="text-decoration: none !important;" href="<?php echo esc_url(home_url('/')); ?>" rel="home">
+						<div class="jm__logo">
+							<div class="logo__border">
+								<div class="logo__content">
+									<div class="logo__lt">&#8249;</div>
+									<div class="logo__text">jorge.mayorga</div>
+									<div class="logo__bt">&#8250;</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</p>
+
 				<?php
-				else :
-				?>
-					<p class="site-title">
-						<a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-							<img alt="Logo" src="<?php echo get_template_directory_uri() ?>/images/logo.png">
-						</a>
-					</p>
-				<?php
-				endif;
 				$personal_website_for_portfolio_and_blog_about_tech_code_ai_and_robotics_description = get_bloginfo('description', 'display');
 				if ($personal_website_for_portfolio_and_blog_about_tech_code_ai_and_robotics_description || is_customize_preview()) :
 				?>
@@ -117,17 +145,19 @@ $visited = isset($_SESSION['visited']);
 			<!-- ---- HEADER::HEADER NAVIGATION ------------------- -->
 			<!-- -------------------------------------------------- -->
 			<nav id="site-navigation" class="main-navigation">
-				<ul id="primary-menu" class="">
+				<ul id="primary-menu" class="main-navigation__nav-list">
 					<?php
-					$menu = wp_get_nav_menu_items('MainMenu');
+					$menu = wp_get_nav_menu_items('MenuHome', array('post_parent' => 0));
 					foreach ($menu as $item) {
+						if (!$item->menu_item_parent) {
 					?>
-						<li class="">
-							<a class="" href="<?php echo ($item->url); ?>">
-								<?php echo ($item->title); ?>
-							</a>
-						</li>
+							<li class="nav-list__item">
+								<a class="item__link" href="<?php echo ($item->url); ?>">
+									<?php echo ($item->title); ?>
+								</a>
+							</li>
 					<?php
+						}
 					}
 
 					?>

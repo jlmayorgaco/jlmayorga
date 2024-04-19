@@ -8,4 +8,10 @@
 			"main"
 			"footer";
 	}
+
+	.site-container{
+		width: 100%;
+		max-width: var( --size-page-max-w);
+		margin: 0 auto;
+	}
 }

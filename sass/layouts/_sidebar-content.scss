@@ -16,6 +16,12 @@
 	overflow: hidden; /* Resolves issue with <pre> elements forcing full width. */
 }
 
+.site-container{
+	width: 100%;
+	max-width: var( --size-page-max-w);
+	margin: 0 auto;
+}
+
 .widget-area {
 	grid-area: sidebar;
 }
