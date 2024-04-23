@@ -15,14 +15,34 @@
 
 get_header();
 ?>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+
 
 <main id="primary" class="site site-main site-container">
 
 	<section class="jm__home_carousel">
-		<h1>TITLE</h1>
-		<h2>SUBTITLE</h1>
+		<?php include_once(get_template_directory().'/components/home-cover.component.php'); ?>
 	</section>
-	<section class="jm__home_categories"></section>
+
+	<section class="jm__home_categories">
+		<ul class="categories__buttons">
+			<li class="categories__button">
+				CATEGORY A
+			</li>
+			<li class="categories__button">
+				CATEGORY B
+			</li>
+			<li class="categories__button">
+				CATEGORY C
+			</li>
+			<li class="categories__button">
+				CATEGORY D
+			</li>
+		</ul>
+	</section>
+
 	<section class="jm__home_articles">
 		<ul class="on-recent">
 			<li></li>
@@ -33,21 +53,23 @@ get_header();
 			</li>
 		</ul>
 	</section>
+
 	<section class="jm_home__projects">
-
 	</section>
+
 	<section class="jm_home__up_coming_events">
-
 	</section>
+
 	<section class="jm_home__about_me">
-
 	</section>
 
-	<section class=""></section>
+	<section id="app"></section>
 
 
 </main><!-- #main -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <?php
 get_sidebar();
 get_footer();
+

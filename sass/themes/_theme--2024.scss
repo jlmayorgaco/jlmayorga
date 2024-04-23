@@ -20,7 +20,7 @@
 }
 
 @font-face {
-    font-family: 'louis-george-cafe-bold';
+    font-family: 'louis-george-cafe-bold';  
     src: url('fonts/Louis George Cafe Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
@@ -33,8 +33,8 @@ body[jm-theme="theme--2024"] {
     --color-main: #4EBFAB;
    
     --color-secundary: #53CEC2;
-    --color-secundary: #85dac5;
-
+    --color-main: #85dac5;
+    
     --color-dark: #1F6D8C;
     --color-clear: #8FBDD9;
     --color-accent: #F26B76;
@@ -53,6 +53,8 @@ body[jm-theme="theme--2024"] {
     --font-spacing-normal: 1px;
 
     --size-page-max-w: 1000px;
+
+    --swiper-cover-controls-h: 140px;
 
 }
 

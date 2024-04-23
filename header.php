@@ -66,7 +66,7 @@ $visited = isset($_SESSION['visited']);
 //$_SESSION['visited'] = true;
 ?>
 
-<body <?php body_class();  ?> is-first-time="<?= $visited ? '' : 'first-visit' ?>" jm-theme="theme--2024">
+<body <?php body_class();  ?> is-first-time="<?= $visited ? '' : 'first-visit' ?>" jm-theme="theme--2024" >
 
 	<!-- --------------------------------------------------- -->
 	<?php wp_body_open(); ?>
@@ -75,7 +75,7 @@ $visited = isset($_SESSION['visited']);
 	<!-- -------------------------------------------------- -->
 	<!-- --- PAGE ----------------------------------------- -->
 	<!-- -------------------------------------------------- -->
-	<div id="page">
+	<div id="page" >
 
 		<!-- -------------------------------------------------- -->
 		<!-- ----WORDPRESS:: Skip to content ------------------ -->
@@ -93,7 +93,7 @@ $visited = isset($_SESSION['visited']);
 			<!-- -------------------------------------------------- -->
 			<!-- ---- HEADER::SITE BRANDING ----------------------- -->
 			<!-- -------------------------------------------------- -->
-			<div class="site-branding jl--logo-circle" >
+			<div class="site-branding jl--logo-circle"  >
 				<p class="site-title">
 					<a style="text-decoration: none !important;" href="<?php echo esc_url(home_url('/')); ?>" rel="home">
 						<div class="jm__logo">
@@ -139,7 +139,10 @@ $visited = isset($_SESSION['visited']);
 												?></p>
 				<?php endif; ?>
 			</div>
+			<!-- -------------------------------------------------- -->
 			<!-- ----- / HEADER::SITE BRANDING -------------------- -->
+			<!-- -------------------------------------------------- -->
+
 
 			<!-- -------------------------------------------------- -->
 			<!-- ---- HEADER::HEADER NAVIGATION ------------------- -->
@@ -163,9 +166,10 @@ $visited = isset($_SESSION['visited']);
 					?>
 				</ul>
 			</nav>
-
-
+			<!-- -------------------------------------------------- -->
 			<!-- ------ / HEADER::HEADER NAVIGATION --------------- -->
+			<!-- -------------------------------------------------- -->
+
 
 		</header>
 		<!-- --- /header -------------------------------------- -->
