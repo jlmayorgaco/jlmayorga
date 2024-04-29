@@ -5,7 +5,8 @@
 ---------------------------------*/
 .site-header{
 	display: block;
-	width: 100%;
+	width: var(--size-page-header-w);
+	height: var(--size-page-header-h);
 	margin: 0 auto;
 	max-width: var(--size-page-max-w);
 
