@@ -114,9 +114,9 @@
 <script type="module" defer>
     var $homeCoverSwiper = new Swiper("#homeCoverSwiper", {
         loop: true,
-        effect: "fade",
+        //effect: "fade",
         autoplay: {
-            delay: 25000,
+            delay: 20000,
             disableOnInteraction: true,
         },
         pagination: {

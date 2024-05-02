@@ -66,4 +66,4 @@ function create_categories()
         ));
 }
 // Hooking up our function to theme setup
-add_action('init', 'create_categories');
+//add_action('init', 'create_categories');

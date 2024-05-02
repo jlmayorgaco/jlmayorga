@@ -27,20 +27,7 @@ get_header();
 	</section>
 
 	<section class="jm__home_categories">
-		<ul class="categories__buttons">
-			<li class="categories__button">
-				CATEGORY A
-			</li>
-			<li class="categories__button">
-				CATEGORY B
-			</li>
-			<li class="categories__button">
-				CATEGORY C
-			</li>
-			<li class="categories__button">
-				CATEGORY D
-			</li>
-		</ul>
+		<?php include_once(get_template_directory().'/components/home-categories.component.php'); ?>
 	</section>
 
 	<section class="jm__home_articles">
@@ -64,6 +51,8 @@ get_header();
 	</section>
 
 	<section id="app"></section>
+
+	<?php include_once(get_template_directory().'/components/footer.component.php'); ?>
 
 
 </main><!-- #main -->
