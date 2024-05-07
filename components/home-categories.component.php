@@ -12,7 +12,7 @@ shuffle ( $categories );
 
 
 
-<h1 class="categories__title">Categories</h1>
+<h1 class="categories__title">Categories </h1>
 <ul class="categories__buttons">
 
     <div class="swiper" id="homeCategoriesSwiper">

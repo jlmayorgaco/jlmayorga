@@ -111,7 +111,16 @@ body[jm-theme="theme--2024"] {
     --swiper-cover-controls-h: 140px;
 
 }
+
+html:has(body[jm-theme="theme--2024"]){
+    display: block;
+    width: 100%;
+    overflow-x: hidden;
+}
 body[jm-theme="theme--2024"]{
+
+        width: calc(100vw - 1em);
+        overflow: hidden;
 
         font-family: 'wotfardregular';
         color: var(--color-texts);

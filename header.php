@@ -51,12 +51,16 @@
 	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.ico" />
 	<!-- --------------------------------------- -->
 
-
+<!--
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
-
+-->
+	<!-- our project just needs Font Awesome Solid + Brands -->
+	<link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/fontawesome.css" rel="stylesheet" />
+	<link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/brands.css" rel="stylesheet" />
+	<link href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/solid.css" rel="stylesheet" />
 </head>
 <!-- ----------------------------------------------------------------- -->
 
@@ -71,7 +75,7 @@ $visited = isset($_SESSION['visited']);
 //$_SESSION['visited'] = true;
 ?>
 
-<body <?php body_class();  ?> is-first-time="<?= $visited ? '' : 'first-visit' ?>" jm-theme="theme--2024" >
+<body <?php body_class();  ?> is-first-time="<?= $visited ? '' : 'first-visit' ?>" jm-theme="theme--2024">
 
 	<!-- --------------------------------------------------- -->
 	<?php wp_body_open(); ?>
@@ -80,7 +84,7 @@ $visited = isset($_SESSION['visited']);
 	<!-- -------------------------------------------------- -->
 	<!-- --- PAGE ----------------------------------------- -->
 	<!-- -------------------------------------------------- -->
-	<div id="page" >
+	<div id="page">
 
 		<!-- -------------------------------------------------- -->
 		<!-- ----WORDPRESS:: Skip to content ------------------ -->
@@ -98,7 +102,7 @@ $visited = isset($_SESSION['visited']);
 			<!-- -------------------------------------------------- -->
 			<!-- ---- HEADER::SITE BRANDING ----------------------- -->
 			<!-- -------------------------------------------------- -->
-			<div class="site-branding jl--logo-circle"  >
+			<div class="site-branding jl--logo-circle">
 				<p class="site-title">
 					<a style="text-decoration: none !important;" href="<?php echo esc_url(home_url('/')); ?>" rel="home">
 						<div class="jm__logo">
@@ -155,13 +159,39 @@ $visited = isset($_SESSION['visited']);
 			<nav id="site-navigation" class="main-navigation">
 				<ul id="primary-menu" class="main-navigation__nav-list">
 					<?php
-					$menu = wp_get_nav_menu_items('MenuHome', array('post_parent' => 0));
+					$menu = wp_get_nav_menu_items('JLMAYORGA_MENU_HOME_NAVIGATION', array('post_parent' => 0));
 					foreach ($menu as $item) {
 						if (!$item->menu_item_parent) {
 					?>
-							<li class="nav-list__item">
+							<li class="nav-list__item <?php
+							foreach ($item->classes as $cssclass) {
+								echo $cssclass;
+								echo ' ';
+							}
+							?> ">
 								<a class="item__link" href="<?php echo ($item->url); ?>">
-									<?php echo ($item->title); ?>
+									<span class="link__title"><?php echo ($item->title); ?></span>	
+								</a>
+							</li>
+					<?php
+						}
+					}
+
+					?>
+				</ul>
+				<ul id="primary-menu-mobile" class="main-navigation__nav-mobile">
+					<?php
+					$menu = wp_get_nav_menu_items('JLMAYORGA_MENU_HOME_NAVIGATION', array('post_parent' => 0));
+					foreach ($menu as $item) {
+						if (!$item->menu_item_parent) {
+					?>
+							<li class="nav-list__item <?php
+							foreach ($item->classes as $cssclass) {
+								echo $cssclass;
+								echo ' ';
+							}
+							?> ">
+								<a class="item__link" href="<?php echo ($item->url); ?>">
 								</a>
 							</li>
 					<?php

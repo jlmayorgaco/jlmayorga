@@ -1,5 +1,4 @@
 
-
 /* --------------------------------
 ---- HEADER -----------------------
 ---------------------------------*/
@@ -53,6 +52,11 @@
 		box-sizing: border-box;
 		width: 100%;
 		padding: var(--logo-p);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
 	}
 	.logo__content{
 		display: block;
@@ -108,13 +112,15 @@
 		left: 0px;
 	}
 }
-
-.jl--logo-circle .jm__logo{
+.site-branding.jl--logo-circle{
 	--logo-w: 50px;
 	--logo-h: 50px;
-	--logo-p: 5px;
+	--logo-p: 2px;
 	--logo-font-size: 26px;
 
+	width: calc(2*var(--logo-p) + var(--logo-w) + 10px);
+}
+.jl--logo-circle .jm__logo{
 	.logo__lt, .logo__bt{
 		display: block;
 	}
@@ -122,12 +128,14 @@
 		border-radius: 100%;
 	}
 }
-.jl--logo-rectangle .jm__logo{
+.site-branding.jl--logo-rectangle{
 	--logo-w: 192px;
 	--logo-h: 36px;
-	--logo-p: 0px;
+	--logo-p: 10px;
 	--logo-font-size: 26px;
-
+	width: calc(2*var(--logo-p) + var(--logo-w));
+}
+.jl--logo-rectangle .jm__logo{
 	.logo__lt, .logo__bt{
 		display: none;
 	}
@@ -135,6 +143,8 @@
 		border-radius: 0px;
 	}
 }
+
+
 
 
 
@@ -250,6 +260,8 @@
 
 @media screen and (min-width: 37.5em) {
 
+
+
 	.menu-toggle {
 		display: none;
 	}
@@ -281,19 +293,30 @@
 	}
 }
 
+html {
+	min-height: calc(100% - env(safe-area-inset-top));
+}
 
-
-
+.main-navigation__nav-mobile{
+	width: 100%;
+	display: none !important;
+}
 
 @media screen and (max-width: 640px) {   
 
 	.site-header{
 		position: fixed;
 		z-index: 10;
-		bottom: var(--size-page-pd);
-		left: var(--size-page-pd);
-		width: calc(100vw - 2*var(--size-page-pd));
+
+		bottom: 0px;
+		left: 0px;
+
+		width: 100vw;
+		box-sizing: border-box;
 		height: 80px;
+
+		overflow: hidden;
+		padding: 0px;
 		background-color: var(--color-clear);
 	}
 	.site-title{
@@ -303,6 +326,7 @@
 		padding: 10px;
 		}
 	}
+    
 	.menu-mainmenu-container{
 		display: block;
 		width: calc(100% - 10px);
@@ -312,6 +336,7 @@
 	#primary-menu{
 		width: 100%;
 		display: flex;
+		display: none;
 		flex-direction: row;
 		align-items: flex-start;
 		justify-content: flex-start;
@@ -320,18 +345,24 @@
 			margin: 0px;
 			opacity: 0.9;
 
-			a span {
-				display: none;
-			}
-			a i{
-				display: inline-block;
-				width: 35px;
-				height: 35px;
-			}
 		}
 		li:hover{
 			opacity: 1;
 		}
 	
+	}
+
+	.main-navigation__nav-mobile{
+		width: 100%;
+		display: flex !important;
+		flex-direction: row;
+		align-items: flex-start;
+		justify-content: flex-start;
+
+		width: 100%;
+		height: 100%;
+		padding: 0em;
+		padding-left: 1em;
+		padding-right: 1em;
 	}
 }

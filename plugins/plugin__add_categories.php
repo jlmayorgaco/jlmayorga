@@ -46,6 +46,13 @@ function create_categories()
             'slug' => 'ielts',
         )
     );
+    wp_insert_term(
+        'Reviews',
+        'category',
+        array(
+            'slug' => 'reviews',
+        )
+    );
 
 
 

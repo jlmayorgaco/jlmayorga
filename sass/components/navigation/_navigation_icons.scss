@@ -1,0 +1,121 @@
+
+.jl--logo-circle{
+    display: block;
+}
+.main-navigation__nav-mobile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-navigation__nav-mobile .jlmayorga__nav_item{
+    --nav-icon--h: 64px;
+    --nav-icon--w: calc(0.725*var(--nav-icon--h));
+    width: var(--nav-icon--w);
+    height: var(--nav-icon--h);
+    margin-right: 0px;
+    .item__link{
+        display: block;
+        padding: 0px;
+        margin: 0px;
+    
+        border: none;
+        width: var(--nav-icon--w);
+        height: var(--nav-icon--h);
+
+        
+        &:after{
+            color: black;
+            display: block;
+            width: var(--nav-icon--w);
+            height: var(--nav-icon--h);
+            //border: 1px solid black;
+            //border-radius: 8px;
+            //background-color: red;
+        }
+
+
+        &.active{
+            width: calc(2*var(--nav-icon--w));
+        }
+        &.active:after{
+            width: calc(2*var(--nav-icon--w));
+        }
+    }
+}
+
+
+.main-navigation__nav-mobile .jlmayorga__nav_item--me .item__link:after{
+    content: "\f2bd";
+    font-weight: 400;
+    font-size: 48px;
+    font-family: "Font Awesome 6 Free";
+}
+.main-navigation__nav-mobile  .jlmayorga__nav_item--blog  .item__link:after{
+    content: "\f1ea";
+    font-weight: 400;
+    font-size: 48px;
+    font-family: "Font Awesome 6 Free";
+}
+.main-navigation__nav-mobile  .jlmayorga__nav_item--projects  .item__link:after{
+    content: "\f0b1";
+    font-weight: 400;
+    font-size: 48px;
+    font-family: "Font Awesome 6 Free";
+}
+.main-navigation__nav-mobile  .jlmayorga__nav_item--tutorials  .item__link:after{
+    content: "\f02d";
+    font-weight: 400;
+    font-size: 48px;
+    font-family: "Font Awesome 6 Free";
+}
+.main-navigation__nav-mobile  .jlmayorga__nav_item--courses  .item__link:after{
+    content: "\f19d";
+    font-weight: 400;
+    font-size: 48px;
+    font-family: "Font Awesome 6 Free";
+}
+.main-navigation__nav-mobile  .jlmayorga__nav_item--research  .item__link:after{
+    content: "\f544";
+    font-weight: 400;
+    font-size: 48px;
+    font-family: "Font Awesome 6 Free";
+}
+
+
+
+
+@media screen and (max-width: 640px) {   
+    .jl--logo-circle{
+        display: none;
+    }
+	.main-navigation__nav-mobile .main-navigation {
+		display: block;
+		width: calc(100% - 0px);
+        box-sizing: border-box;padding: 12px;
+        height: 100%;
+	}
+    .main-navigation__nav-mobile .main-navigation ul{
+        margin-top: 0px !important;
+        margin-left: 0px !important;
+    }
+    .main-navigation__nav-mobile .main-navigation li {
+        padding: 0px;
+    }
+    .main-navigation__nav-mobile .jlmayorga__nav_item{
+        padding: 0px;
+        .link__title{
+            display: none;
+        }
+        .link__icon{
+            display: block;
+        }
+    }
+
+
+
+    .jlmayorga__nav_item--research{
+        display: none !important;
+    }
+
+}
