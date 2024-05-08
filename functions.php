@@ -142,7 +142,7 @@ function personal_website_for_portfolio_and_blog_about_tech_code_ai_and_robotics
 	wp_style_add_data( 'personal-website-for-portfolio-and-blog-about-tech-code-ai-and-robotics-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'personal-website-for-portfolio-and-blog-about-tech-code-ai-and-robotics-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'v_jlmayorga_app_script', get_template_directory_uri() .  '/vue/v-jlmayorga-app/dist/assets/js/index.js', array(), _S_VERSION, true );
+	//wp_enqueue_script( 'v_jlmayorga_app_script', get_template_directory_uri() .  '/vue/v-jlmayorga-app/dist/assets/js/index.js', array(), _S_VERSION, true );
 	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

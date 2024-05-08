@@ -50,15 +50,11 @@ get_header();
 	<section class="jm_home__about_me">
 	</section>
 
-	<section id="app"></section>
-
-	<?php include_once(get_template_directory().'/components/footer.component.php'); ?>
-
 
 </main><!-- #main -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();
 
