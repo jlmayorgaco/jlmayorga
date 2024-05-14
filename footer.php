@@ -38,9 +38,9 @@
 			Get in touch
 			01942 894 596
 			hello@madebyshape.co.uk
-			MadeByShape 
-			1 Gibfield Park Avenue 
-			Atherton Manchester 
+			MadeByShape
+			1 Gibfield Park Avenue
+			Atherton Manchester
 			M46 0SU
 
 			///topped.little.pirate
@@ -48,7 +48,7 @@
 		</div>
 	</section>
 	<section class="footer__copyright">
-		<h3>© 2021–<?= date('Y'); ?>
+		<h3>© 2021 – <?php echo date('Y'); ?>
 			<?php
 			/* translators: 1: Theme name, 2: Theme author. */
 			printf(esc_html__('Theme: %1$s by %2$s.', 'personal-website-for-portfolio-and-blog-about-tech-code-ai-and-robotics'), 'personal-website-for-portfolio-and-blog-about-tech-code-ai-and-robotics', '<a href="http://jlmayorga.com">jl.mayorga.co@gmail.com</a>');
