@@ -45,6 +45,7 @@ get_header();
 	</section>
 
 	<section class="jm_home__up_coming_events">
+		
 	</section>
 
 	<section class="jm_home__about_me">

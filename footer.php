@@ -21,37 +21,54 @@
 		</button>
 	</section>
 	<section class="footer__info">
-		<div class="footer_info__col footer_info__col--col0 col--message"></div>
-		<div class="footer_info__col footer_info__col--col1 col--nav">
-			Home
-			Work
-			NEW
-			Services
-			Careers
-			Sectors
-			Hex Test
-			Contact
+		<div class="footer_info__col footer_info__col--col0 col--message">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+							<img alt="Logo" src="<?php echo get_template_directory_uri() ?>/images/logo_wide_white_transparent.png">
+				</a>
 		</div>
-		<div class="footer_info__col footer_info__col--col2 col--legal"></div>
+		<div class="footer_info__col footer_info__col--col1 col--nav">
+			<ul>
+				<li class="footer_info__col__title"> Navigation </li>
+				<li> <a href="">Projects</a></li>
+				<li> <a href="">Tutorials</a></li>
+				<li> <a href="">Services</a></li>
+				<li> <a href="">Portfolio</a></li>
+				<li> <a href="">Events</a></li>
+				<li> <a href="">Contact Me</a></li>
+			</ul>
+		</div>
+		<div class="footer_info__col footer_info__col--col2 col--legal">
+			<ul>
+				<li class="footer_info__col__title"> Legal and Policy </li>
+				<li> <a href="">Terms of Use</a></li>
+				<li> <a href="">Privacy Policy</a></li>
+			</ul>
+		</div>
 		<div class="footer_info__col footer_info__col--col3 col--follow-us">
-
-			Get in touch
-			01942 894 596
-			hello@madebyshape.co.uk
-			MadeByShape
-			1 Gibfield Park Avenue
-			Atherton Manchester
-			M46 0SU
-
-			///topped.little.pirate
-
+			<ul>
+				<li class="footer_info__col__title"> Get in touch </li>
+				<li> <a href=""> Email: contact@jlmayorga.com </a></li>
+				<li> <a href=""> Github: </a></li>
+				<li> <a href=""> LinkedIn: </a></li>
+				<li> <a href=""> Facebook: </a></li>
+				<li> <a href=""> Instagram: </a></li>
+				<li> <a href=""> Youtube: </a></li>
+				<li> <a href=""> Twitch: </a></li>
+			</ul>
 		</div>
 	</section>
 	<section class="footer__copyright">
 		<h3>© 2021 – <?php echo date('Y'); ?>
 			<?php
 			/* translators: 1: Theme name, 2: Theme author. */
-			printf(esc_html__('Theme: %1$s by %2$s.', 'personal-website-for-portfolio-and-blog-about-tech-code-ai-and-robotics'), 'personal-website-for-portfolio-and-blog-about-tech-code-ai-and-robotics', '<a href="http://jlmayorga.com">jl.mayorga.co@gmail.com</a>');
+			printf(
+				esc_html__(
+					'Theme: %1$s by %2$s.',
+					'wp-jlmayorga'
+				),
+				'wp-jlmayorga',
+				'<a href="http://jlmayorga.com">jl.mayorga.co@gmail.com</a>'
+			);
 			?>
 		</h3>
 	</section>

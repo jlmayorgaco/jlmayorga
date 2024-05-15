@@ -43,7 +43,9 @@
         }
     }
 }
-
+.item__link:visited{
+    color: var(--color-gray);
+}
 
 .main-navigation__nav-mobile .jlmayorga__nav_item--me .item__link:after{
     content: "\f2bd";
