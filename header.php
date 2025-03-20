@@ -160,6 +160,9 @@ $visited = isset($_SESSION['visited']);
 				<ul id="primary-menu" class="main-navigation__nav-list">
 					<?php
 					$menu = wp_get_nav_menu_items('JLMAYORGA_MENU_HOME_NAVIGATION', array('post_parent' => 0));
+					//echo '<h1> TWICE! </h1>';
+					//var_dump($menu);
+
 					foreach ($menu as $item) {
 						if (!$item->menu_item_parent) {
 					?>
