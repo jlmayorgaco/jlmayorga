@@ -50,64 +50,30 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 --------------------------------------------------------------*/
 
-// Import variables and mixins.
-@import "abstracts/abstracts";
 
-/*--------------------------------------------------------------
-# Generic
---------------------------------------------------------------*/
+// Import all variables and mixins at once
+@use "abstracts" as *;
 
-/* Normalize
---------------------------------------------- */
-@import "generic/normalize";
+// Generic styles
+@use "generic/normalize" as *;
+@use "generic/box-sizing" as *;
 
-/* Box sizing
---------------------------------------------- */
-@import "generic/box-sizing";
+// Base styles
+@use "base/base" as *;
 
-/*--------------------------------------------------------------
-# Base
---------------------------------------------------------------*/
-@import "base/base";
+// Themes
+@use "themes/theme--2024" as *;
+//@use "themes/theme--synth3" as *;
 
+// Layouts
+@use "layouts/content-sidebar" as *;
 
-/* Themes
---------------------------------------------- */
-@import "themes/theme--2024";
-@import "themes/theme--synth3";
+// Components
+@use "components/components" as *;
 
+// Plugins
+@use "plugins/jetpack/infinite-scroll" as *;
 
-/*--------------------------------------------------------------
-# Layouts
---------------------------------------------------------------*/
-@import "layouts/content-sidebar";
-
-// @import "layouts/content-sidebar"; // Uncomment this line for a sidebar on right side of your content.
-// @import "layouts/sidebar-content"; // Uncomment this line for a sidebar on left side of your content.
-
-/*--------------------------------------------------------------
-# Components
---------------------------------------------------------------*/
-@import "components/components";
-
-/*--------------------------------------------------------------
-# Plugins
---------------------------------------------------------------*/
-
-/* Jetpack infinite scroll
---------------------------------------------- */
-@import "plugins/jetpack/infinite-scroll";
-
-/*--------------------------------------------------------------
-# Utilities
---------------------------------------------------------------*/
-
-/* Accessibility
---------------------------------------------- */
-@import "utilities/accessibility";
-
-/* Alignments
---------------------------------------------- */
-@import "utilities/alignments";
-
-
+// Utilities
+@use "utilities/accessibility" as *;
+@use "utilities/alignments" as *;
