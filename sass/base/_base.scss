@@ -1,26 +1,26 @@
 /* Typography
 --------------------------------------------- */
-@import "typography/typography";
+@use "typography/typography" as *;
 
 /* Elements
 --------------------------------------------- */
-@import "elements/body";
-@import "elements/pages";
-@import "elements/hr";
-@import "elements/lists";
-@import "elements/media";
-@import "elements/tables";
+@use "elements/body";
+@use "elements/pages";
+@use "elements/hr";
+@use "elements/lists";
+@use "elements/media";
+@use "elements/tables";
 
 /* Links
 --------------------------------------------- */
-@import "elements/links";
+@use "elements/links";
 
 /* Forms
 --------------------------------------------- */
-@import "elements/buttons";
-@import "elements/fields";
+@use "elements/buttons";
+@use "elements/fields";
 
 
-@import "elements/icons";
-@import "elements/loader";
+@use "elements/icons";
+@use "elements/loader";
 
