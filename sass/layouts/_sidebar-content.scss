@@ -1,3 +1,9 @@
+
+@use "abstracts/variables/colors" as *;
+@use "abstracts/variables/typography" as *;
+@use "abstracts/variables/columns" as *;
+@use "abstracts/variables/structure" as *;
+
 .site {
 	display: grid;
 	grid-template-columns: ($size__site-sidebar) auto;
@@ -30,4 +36,4 @@
 	grid-area: footer;
 }
 
-@import "no-sidebar";
+@use "no-sidebar";
