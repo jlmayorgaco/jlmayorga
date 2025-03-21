@@ -1,8 +1,10 @@
-@import '../../abstracts/variables/colors';
+
+@use "abstracts/variables/colors" as *;
+@use "abstracts/variables/typography" as *;
+@use "abstracts/variables/columns" as *;
+@use "abstracts/variables/structure" as *;
 
 .jlmayorga__page{
-
-    
 
     display: block;
     background-color: var(--color-clear);
