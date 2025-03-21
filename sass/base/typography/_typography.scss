@@ -1,4 +1,12 @@
 
+@use "abstracts/variables/colors" as *;
+@use "abstracts/variables/typography" as *;
+@use "abstracts/variables/columns" as *;
+@use "abstracts/variables/structure" as *;
+
+@use "headings" as *;
+@use "copy" as *;
+
 
 body,
 button,
@@ -11,9 +19,4 @@ textarea {
 	font-size: 1rem;
 	line-height: $font__line-height-body;
 }
-
-@import "headings";
-@import "copy";
-
-
 
