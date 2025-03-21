@@ -1,3 +1,9 @@
+
+@use "abstracts/variables/colors" as *;
+@use "abstracts/variables/typography" as *;
+@use "abstracts/variables/columns" as *;
+@use "abstracts/variables/structure" as *;
+
 .no-sidebar {
 
 	.site {
@@ -11,7 +17,8 @@
 
 	.site-container{
 		width: 100%;
-		max-width: var( --size-page-max-w);
+		max-width: 100%;
+		//max-width: var( --size-page-max-w);
 		margin: 0 auto;
 	}
 }
