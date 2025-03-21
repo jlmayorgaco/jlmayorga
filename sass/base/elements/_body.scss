@@ -1,3 +1,8 @@
+@use "abstracts/variables/colors" as *;
+@use "abstracts/variables/typography" as *;
+@use "abstracts/variables/columns" as *;
+@use "abstracts/variables/structure" as *;
+
 body {
 
 	background: $color__background-body; // Fallback for when there is no custom background color defined.
