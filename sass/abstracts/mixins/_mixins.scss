@@ -1,3 +1,11 @@
+
+@use "sass:math";
+
+@use "../variables/colors" as *;
+@use "../variables/typography" as *;
+@use "../variables/columns" as *;
+@use "../variables/structure" as *;
+
 // Center block
 @mixin center-block {
 	display: block;
@@ -5,7 +13,9 @@
 	margin-right: auto;
 }
 
-// Column width with margin
+
 @mixin column-width($numberColumns: 3) {
-	width: map-get($columns, $numberColumns) - ( ( $columns__margin * ( $numberColumns - 1 ) ) / $numberColumns );
-}
+	$total-margin: math.div($columns__margin * ($numberColumns - 1), $numberColumns);
+	width: map-get($columns, $numberColumns) - $total-margin;
+  }
+  
