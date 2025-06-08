@@ -108,15 +108,14 @@
              <div class="swiper-pagination"></div>
         </div>
     </div>
-
 </div>
 
 <script type="module" defer>
     var $homeCoverSwiper = new Swiper("#homeCoverSwiper", {
-        loop: true,
+        //loop: true,
         //effect: "fade",
         autoplay: {
-            delay: 20000,
+            delay: 2000,
             disableOnInteraction: true,
         },
         pagination: {
@@ -127,6 +126,7 @@
                 const title = el.getAttribute('post-title');
                 console.log( ' title ')
                 console.log(title)
+                return '';
                 return '<div class="swiper-pagination__label ' + className + '">' +
                             '<div class="swiper-pagination__counter"> <span>' + (index + 1) + '</span></div>' +
                             '<div class="swiper-pagination__title">' +  title + '</div>' +
